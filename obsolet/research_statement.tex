@@ -1,0 +1,137 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-emerald}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\name{Luis F.}{Santa G.}
+\position{Data Scientist{\enskip\cdotp\enskip}Statistician}
+%\address{R. Santa Bárbara 30 e 32 R/Ch, 1150-289, Lisbon, Portugal}
+
+\mobile{(+351) 912 960 044}
+\email{fernando.santa@novaims.unl.pt}
+\linkedin{lfsantag}
+\skype{fernando.santa1983}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+\quote{``What we think, we become."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Research statement}
+  {}
+% The date on the letter, default is the date of compilation
+\letterdate{}
+% The title of the letter
+\lettertitle{Job Application for an Assistant Professor at OMD}
+
+% How the letter is opened
+%\letteropening{Dear Professors Dr. Oksanen,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+%\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+    {Luis F. Santa G.~~~·~~~Research statement}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+I am Luis Fernando Santa Guzman, a statistician and cadastral and geodetic engineer with MSc in Geomatics, and PhD in Information Management from the Universidade Nova de Lisboa (Portugal), University of Münster (Germany), and Universitat Jaume I (Spain), as part of the GEO-C project (\url{www.geo-c.eu}), an H2020 ITN Marie Curie Skłodowska action. Since my first bachelor degree, I have always been very interested in the role of statistical methods as a fundamental tool for solving problems in the real world, mainly, phenomena that occur on the surface of the earth. At that moment, I found a new and fascinating world that I have travelled during the last 18 years playing multiple roles as a data analyst, senior lecturer, supervisor, consultant, and researcher.\par 
+On the other hand, my academic background, which is a particular combination between Statistics and geographic information science has allowed me to work in multidisciplinary teams providing different and innovative conceptual elements for the analysis of several processes, such as:
+\begin{itemize}
+    \item I worked with the Colombian Corporation of Agricultural Research and the Colombian Oil Palm Research Centre developing data analysis to study relationships between soil properties and climate variables with crop yield and the distribution of plagues.
+    \item I supervised several projects that aimed to analyse the spatial behaviour of subsidence, rainfalls distribution, gravimetric and magnetic fields, and air pollutants, among others. We used Bayesian methods for predicting and defining optimal spatial sampling designs.
+    \item I studied the spatio-temporal behaviour of various diseases such as dengue, malaria, and gastric cancer, among others. We used regression modelling and Bayesian methods for identifying several factors associated with the distribution of the number of cases across space and time.
+\end{itemize}
+My Ph. D. was one of fifteen projects under the GEO-C program (funded by the European Commission under Marie Skłodowska-Curie, International Training Networks and European Joint Doctorates). Its aim was developing methods of data analysis to understand urban dynamics and provide insights into human activity and mobility for urban planning and decision-making processes in the scope of smart cities. Based on the idea that information and communication technologies (ICT) allow collecting data about city environments and human behaviour through using ubiquitous devices such as mobile phones and sensors, I gathered data coming from several sources for a specific city. These sources included: (1) road traffic monitoring sensors, (2) smart cards with entries and exits into a public transport system, and (3) social media. On the other hand, human behaviour presents high spatio-temporal regularity; it is known that people tend to repeat the same activities every 24 hours and frequently visit the same places. However, there are also unexpected situations caused by crowded events, alterations in the traffic due to car accidents, sudden increases in vehicles in the streets, or fail in transport systems.\par
+My approach, to model these datasets, was the use of spatio-temporal statistics. Statistical modelling provide elements (parameters of the models) to understand and explain underlying processes generating the data and are able to replicate or simulate complex systems that can be useful in monitoring urban dynamics more reliably. I considered modelling approaches related to generalised linear models (GLM), functional principal components analysis (FPCA), statistical analysis of spatial point patterns, hierarchical clustering, aberration detection, functional time series, spatio-temporal graph theory, and epidemic data, among others. In most of the cases, it was considered the observations as daily repeated measurements and opted for non-parametric estimation to avoid strong distributional assumptions when it was possible.\par
+
+For social media data, geolocated tweets were downloaded as a proxy for human activity in urban environments. The analysis was divided into two parts. First, by estimating regression models under the scope of the GLMs to explain the number of geolocated tweets per hour in a city as a function of the hour-of-the-day, the day-of-the-week, and autoregressive trends. Second, by clustering hours of the day with similar patterns of spatial arrangement of the places where people interact with their social networks. Additionally, I estimated an endemic-epidemic model to explain the number of tweets per area and per hour as a proxy for human activity in cities. This model assumes a negative binomial distribution for the counts and includes seasonal effects as \emph{normal} or \emph{endemic} human behaviour and spatio-temporal autoregressive parameters for \emph{epidemic} or \emph{abnormal} situations as crowed events. To study the information coming from road traffic sensors in cities, an approach for characterising, monitoring, and predicting the behaviour of vehicular mobility was developed. First, groups of sensors were identified that exhibit a similar daily distribution in the number of counted vehicles. Second, for each defined group, through implementing techniques of aberration detection a monitoring system of counts of cars to identify out of control counts was built. Finally, predictions of the discrete time series associated with each sensor were made by using Hyndman-Ullah method, the accuracy of the one-step-ahead forecasts was evaluated. Finally, for modelling the spatio-temporal directed graph that represents the flows origin-destination within an underground railway system, daily time series for every pair of stations, with the number of trips every 15 minutes starting in one of them and finishing in the other, were considered. In this case, the method involved a mix between two steps FPCA and hierarchical clustering to summarise daily and weekly behaviours and to describe the activity over the entire graph.\par
+Based on all of the above, I have discovered and described common patterns as well as abnormal situations regarding city dynamics. Those methods provide novelty approaches that can be used to analyse several cities and understand their behaviour, with the benefit that those are versatile to deal with big datasets coming from a myriad of sources.\par My current work focuses on the use and analysis of spatio-temporal data originated by new and massive data sources such as, e.g., social media, sensors, and telecommunication networks that require to rethink software tools, the architecture of systems, and methods of analysis to provide solutions in near real-time. Now, I am working in three projects related with developing statistical methods for:
+\begin{itemize}
+    \item Spatio-temporal statistical analysis of origin-destination matrices.
+    \item A statistical test for spatio-temporal clustering and interaction in point patterns based on two-dimensional functional data.
+    \item An approach to study epidemic data under the scope of functional data analysis.
+\end{itemize}
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+%\makeletterclosing
+
+\end{document}

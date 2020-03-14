@@ -1,0 +1,129 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-emerald}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\name{Luis F.}{Santa G.}
+\position{Data Scientist{\enskip\cdotp\enskip}Statistician}
+\address{R. Santa Bárbara 30 e 32 R/Ch, 1150-289, Lisbon, Portugal}
+
+\mobile{(+351) 912 960 044}
+\email{fernando.santa@novaims.unl.pt}
+\linkedin{lfsantag}
+\skype{fernando.santa1983}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+\quote{``What we think, we become."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Ph.D. Project Description}
+  {}
+% The date on the letter, default is the date of compilation
+\letterdate{}
+% The title of the letter
+\lettertitle{Job Application for a Data Scientist position}
+
+% How the letter is opened
+%\letteropening{Dear Professors Dr. Oksanen,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+%\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+    {Luis F. Santa G.~~~·~~~Ph.D. Project Description}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{Summary}
+My Ph. D. was one of fifteen projects under the GEO-C program (funded by the European Commission under Marie Skłodowska-Curie, International Training Networks and European Joint Doctorates). Its aim was developing methods of data analysis to understand urban dynamics and provide insights into human activity and mobility for urban planning and decision-making processes in the scope of smart cities. Based on the idea that information and communication technologies (ICT) allow collecting data about city environments and human behaviour through using ubiquitous devices such as mobile phones and sensors, I gathered data coming from several sources for a specific city. These sources included: (1) road traffic monitoring sensors, (2) smart cards with entries and exits into a public transport system, and (3) social media. On the other hand, human behaviour presents high spatio-temporal regularity; it is known that people tend to repeat the same activities every 24 hours and frequently visit the same places. However, there are also unexpected situations caused by crowded events, alterations in the traffic due to car accidents, sudden increases in vehicles in the streets, or fail in transport systems.\par
+My approach, to model these datasets, was the use of spatio-temporal statistics. Statistical modelling provide elements (parameters of the models) to understand and explain underlying processes generating the data and are able to replicate or simulate complex systems that can be useful in monitoring urban dynamics more reliably. I considered modelling alternatives related to multivariate count time series, spatio-temporal graph theory, epidemic data, and trajectories analysis in combination with weekly repeated measurements and when it was possible non-parametric estimation for avoiding strong distributional assumptions.\par
+For social media data, I downloaded geolocated tweets then I estimated an endemic-epidemic model to explain the number of tweets per area and per hour as a proxy for human activity in cities. This model assumes a negative binomial distribution for the counts and includes seasonal effects as \emph{normal} or \emph{endemic} human behaviour and spatio-temporal autoregressive parameters for \emph{epidemic} or \emph{abnormal} situations as crowed events.\par
+To analyse the data from traffic monitoring sensors, I modelled the count of vehicles in specific streets every 15 minutes. To do that, I used longitudinal functional data analysis, converting daily time series in functional curves, after finding the \emph{representative} weekly curve for each location, and finally, making clustering of weekly trajectories to get locations with comparable traffic behaviour.\par 
+I developed a similar proposal for modelling the spatio-temporal directed graph that represents the flows origin-destination within a subway system, considering daily time series for every pair of stations with the number of trips every 15 minutes starting in one of them and finishing in another. In this case, the method involved a mix between two steps functional principal component analysis and cluster analysis to summarise daily and weekly behaviours and to describe the activity over the entire graph.\par 
+Finally, for identifying human mobility patterns in a city, I used call detail records from mobile phones.  I implemented density kernel estimation based on b-splines to represent the daily movement trajectory of callers through the telecommunication network. All those trajectories were aggregated using cluster analysis over curves.\par
+Based on all of the above, I have discovered and described common patterns as well as abnormal situations regarding city dynamics. Those methods provide novelty approaches that can be used to analyse several cities and understand their behaviour, with the benefit that those are versatile to deal with big datasets coming from a myriad of sources.
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+%\makeletterclosing
+
+\end{document}
